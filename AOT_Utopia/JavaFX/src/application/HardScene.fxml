@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="anchorpane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="900.0" prefWidth="1350.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.ControllerHard">
+   <children>
+      <HBox layoutX="23.0" layoutY="779.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="99.0" prefWidth="1304.0">
+         <children>
+            <Button maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#buyPiercingCannon" prefHeight="98.0" prefWidth="294.0" text="Piercing Cannon" />
+            <Button maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#buySniperCannon" prefHeight="98.0" prefWidth="322.0" text="Sniper Cannon" />
+            <Button maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#buyVolleySpreadCannon" prefHeight="99.0" prefWidth="334.0" text="Volley Spread Cannon" />
+            <Button maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#buyWallTrap" prefHeight="98.0" prefWidth="352.0" text="Wall Trap" />
+         </children>
+      </HBox>
+      <HBox fx:id="lane1weapbox" layoutX="49.0" layoutY="27.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="70.0" prefWidth="290.0" style="-fx-border-color: black;" />
+      <HBox fx:id="lane2weapbox" layoutX="49.0" layoutY="175.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="78.0" prefWidth="290.0" style="-fx-border-color: black;" />
+      <HBox fx:id="lane3weapbox" layoutX="49.0" layoutY="323.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="70.0" prefWidth="290.0" style="-fx-border-color: black;" />
+      <HBox fx:id="lane4weapbox" layoutX="49.0" layoutY="464.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="70.0" prefWidth="290.0" style="-fx-border-color: black;" />
+      <HBox fx:id="lane5weapbox" layoutX="49.0" layoutY="619.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="70.0" prefWidth="290.0" style="-fx-border-color: black;" />
+      
+      <Button fx:id="lane1lsct" layoutX="11.0" layoutY="42.0" mnemonicParsing="false" onAction="#buyFinalAction" prefHeight="126.0" prefWidth="31.0" text="L1" wrapText="true" />
+      <Button fx:id="lane2lsct" layoutX="11.0" layoutY="190.0" mnemonicParsing="false" onAction="#buyFinalAction" prefHeight="126.0" prefWidth="31.0" text="L2" wrapText="true" />
+      <Button fx:id="lane3lsct" layoutX="11.0" layoutY="338.0" mnemonicParsing="false" onAction="#buyFinalAction" prefHeight="126.0" prefWidth="31.0" text="L3" />
+      <Button fx:id="lane4lsct" layoutX="11.0" layoutY="486.0" mnemonicParsing="false" onAction="#buyFinalAction" prefHeight="126.0" prefWidth="31.0" text="L4" />
+      <Button fx:id="lane5lsct" layoutX="11.0" layoutY="634.0" mnemonicParsing="false" onAction="#buyFinalAction" prefHeight="126.0" prefWidth="31.0" text="L5" />
+      
+      <AnchorPane fx:id="lane1titans" layoutX="536.0" layoutY="14.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="117.0" prefWidth="804.0" style="-fx-border-color: black;" />
+      <AnchorPane fx:id="lane2titans" layoutX="536.0" layoutY="137.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="118.0" prefWidth="804.0" style="-fx-border-color: black;" />
+      <AnchorPane fx:id="lane3titans" layoutX="536.0" layoutY="264.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="118.0" prefWidth="804.0" style="-fx-border-color: black;" />
+      <AnchorPane fx:id="lane4titans" layoutX="536.0" layoutY="399.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="118.0" prefWidth="804.0" style="-fx-border-color: black;" />
+      <AnchorPane fx:id="lane5titans" layoutX="536.0" layoutY="533.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="118.0" prefWidth="804.0" style="-fx-border-color: black;" />
+      
+      <Button fx:id="passturnbtn" layoutX="534.0" layoutY="679.0" mnemonicParsing="false" onAction="#turnPassBtn" prefHeight="31.0" prefWidth="282.0" text="Pass Turn">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Button>
+      
+      <Label fx:id="scorelabel" layoutX="871.0" layoutY="673.0" prefHeight="31.0" prefWidth="66.0" text="Score: 0" />
+      <Label fx:id="turnLabel" layoutX="1007.0" layoutY="673.0" prefHeight="31.0" prefWidth="60.0" text="Turn: 0" />
+      <Label fx:id="phaseLabel" layoutX="1024.0" layoutY="719.0" prefHeight="50.0" prefWidth="118.0" text="Phase: " wrapText="true" />
+      <Label fx:id="resourcesLabel" layoutX="1120.0" layoutY="673.0" prefHeight="31.0" prefWidth="97.0" text="Resources:" />
+      
+      <HBox fx:id="weapbox1labels" layoutX="49.0" layoutY="105.0" prefHeight="70.0" prefWidth="290.0" style="-fx-border-color: black;" />
+      <HBox fx:id="weapbox2labels" layoutX="49.0" layoutY="253.0" prefHeight="70.0" prefWidth="290.0" style="-fx-border-color: black;" />
+      <HBox fx:id="weapbox3labels" layoutX="49.0" layoutY="393.0" prefHeight="70.0" prefWidth="290.0" style="-fx-border-color: black;" />
+      <HBox fx:id="weapbox4labels" layoutX="49.0" layoutY="537.0" prefHeight="78.0" prefWidth="290.0" style="-fx-border-color: black;" />
+      <HBox fx:id="weapbox5labels" layoutX="49.0" layoutY="697.0" prefHeight="70.0" prefWidth="290.0" style="-fx-border-color: black;" />
+      
+      <ImageView fx:id="lanewall1" fitHeight="98.0" fitWidth="166.0" layoutX="354.0" layoutY="14.0">
+         <image>
+            <Image url="@../../../../Pictures/wall%20icon.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="lanewall2" fitHeight="98.0" fitWidth="166.0" layoutX="354.0" layoutY="152.0">
+         <image>
+            <Image url="@../../../../Pictures/wall%20icon.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="lanewall3" fitHeight="98.0" fitWidth="166.0" layoutX="354.0" layoutY="300.0">
+         <image>
+            <Image url="@../../../../Pictures/wall%20icon.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="lanewall4" fitHeight="98.0" fitWidth="166.0" layoutX="354.0" layoutY="450.0">
+         <image>
+            <Image url="@../../../../Pictures/wall%20icon.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="lanewall5" fitHeight="98.0" fitWidth="166.0" layoutX="354.0" layoutY="588.0">
+         <image>
+            <Image url="@../../../../Pictures/wall%20icon.jpg" />
+         </image>
+      </ImageView>
+      
+      <Label fx:id="walllabel1" layoutX="354.0" layoutY="121.0" prefHeight="31.0" prefWidth="166.0" text="Label" />
+      <Label fx:id="walllabel2" layoutX="354.0" layoutY="269.0" prefHeight="31.0" prefWidth="166.0" text="Label" />
+      <Label fx:id="walllabel3" layoutX="354.0" layoutY="417.0" prefHeight="31.0" prefWidth="166.0" text="Label" />
+      <Label fx:id="walllabel4" layoutX="354.0" layoutY="565.0" prefHeight="31.0" prefWidth="166.0" text="Label" />
+      <Label fx:id="walllabel5" layoutX="354.0" layoutY="713.0" prefHeight="31.0" prefWidth="166.0" text="Label" />
+      
+   </children>
+</AnchorPane>

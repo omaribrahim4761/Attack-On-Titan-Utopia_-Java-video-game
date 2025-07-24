@@ -1,0 +1,8 @@
+/* JavaFX CSS - Leave this comment until you have at least create one rule which uses -fx-Property */
+/* styles.css */
+.label {
+    -fx-text-fill: black; /* Set the text color to black */
+    -fx-background-color: white; /* Set the background highlight color to white */
+    -fx-padding: 5; /* Add some padding around the text */
+    -fx-background-radius: 5; /* Add rounded corners to the background */
+}
